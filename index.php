@@ -9,18 +9,19 @@
 </head>
 <body>
     <div class="container">
-        Инструкция по применению формы:<br>
-        1) вводим значение<br>
-        2) жмем кнопку установить!<br>
-        3) жмем кнопку отправить !<br>
+        
+        Instructions for use of the form:<br>
+        1) enter the value<br>
+        2) click the install button!<br>
+        3) press the send button!<br>
 
         <form action="getval.php" method="POST">
             
-            <input type="text" name="inpval" placeholder="вводим значение" pattern="[0-9]{0,50}"><br />
+            <input type="text" name="inputvalue" placeholder="input value" pattern="[0-9]{0,50}"><br />
   
-            <input type="reset" value="Удалить"/><br />
+            <input type="reset" value="Delete Value"/><br />
 
-            <input type="submit" name="out" value="Установить" /><br />
+            <input type="submit" name="out" value="Send Value" /><br />
 
         </form>
       

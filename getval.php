@@ -8,28 +8,46 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
 
     <?php 
-    require_once('classes.php');
-    require_once('classes2.php');
+    spl_autoload_register(function ($classes) {
+        include $classes . '.php';
+    });
 
     $class = new myClass;
-
     $class->setValue();
     $class->getValue( $from_inp );
-    $class->deleteValue();
+
 
     
     ?>
 
-    ВТОРОЕ ЗАДАНИЕ <br />
+    <br />Second-task <br />
 
     <?php
-        $config = new firstClass( "ПЕРЕДАЕТ!" );
-        $nextClass = new connect( $config );
+        $config = new baseClass( "Hello World!" );
+        $nextClass = new connectClass( $config );
         
         print_r( $nextClass->val() );
     ?>
+
+
+    <br />Self-education<br />
+
+    <?php
+
+    $human = [
+        new emp('Ivan', 50),
+        new emp('Petya', 17),
+        new emp('Kostya', 22),
+        new emp('Fedya', 16)
+    ];
+    
+    foreach ($human as $rab) {
+        echo $rab->info(). ' ' . $rab->getAge();
+    }
+    ?>
+    </div>
 </body>
 </html>
